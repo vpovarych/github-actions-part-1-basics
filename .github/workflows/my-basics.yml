@@ -47,7 +47,7 @@ jobs:
       run : ls -la
   
   my_deploy:
-    runs-on: ubuntu
+    runs-on: ubuntu-20.04.4
     needs: [my_testing]
     env:
       VAR1 : "This is Job Level Variable1"
