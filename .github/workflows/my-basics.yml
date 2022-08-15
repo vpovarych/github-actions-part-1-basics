@@ -27,7 +27,12 @@ jobs:
     - name: Execure few commands
       run : |
         free -m
-        du -H
+        du
+        w
+        id
+        uptime
+        ls /home
+        cat /etc/os-release
         echo "Hello Message1"
         echo "Hello Message2"
         echo "Appication name: ${{ env.APPLICATION_NAME }}"
