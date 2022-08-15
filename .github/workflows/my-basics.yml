@@ -26,6 +26,8 @@ jobs:
     
     - name: Execure few commands
       run : |
+        free -m
+        du -H
         echo "Hello Message1"
         echo "Hello Message2"
         echo "Appication name: ${{ env.APPLICATION_NAME }}"
@@ -40,7 +42,7 @@ jobs:
       run : ls -la
   
   my_deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu18
     needs: [my_testing]
     env:
       VAR1 : "This is Job Level Variable1"
