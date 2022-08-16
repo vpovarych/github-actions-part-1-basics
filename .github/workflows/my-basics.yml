@@ -28,7 +28,7 @@ jobs:
       run : |
         free -m
         du
-        w
+        w 
         id
         uptime
         ls /home
